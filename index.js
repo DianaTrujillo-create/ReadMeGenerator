@@ -31,12 +31,23 @@ const questions = [{
     message: "What is app used for?", 
     name: "Usage",
     // what is the app intended for
-} 
-
-]
-
-    ])
-}
+}, {
+    type: "list",
+    message: "What license is being used?",
+    name: "License",
+}, {
+    type: "input",
+    message: "Who contributed to this project?:",
+    name: "Contributing"
+}, {
+    type: "input",
+    message: "What is needed to test this app?",
+    name: "Test",
+}, {
+    type: "input",
+    message: "What is your email address?",
+    name: "Email",
+},
 
 ];
 

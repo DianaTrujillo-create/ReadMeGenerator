@@ -22,6 +22,7 @@ const questions = [
     type: 'input',
     message: "Give a detailed description of your project.",
     name: "Description",
+
     }, 
     
     {
@@ -82,7 +83,7 @@ function init() {
     .then(function(data){
         writetoFile("README.md", generateMarkdown(data));
         console.log(data)
-    })
+    });
 }
 
 // function call to initialize program

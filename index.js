@@ -65,24 +65,16 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName,data, function(err){
-        console.log(fileName)
-        console.log(data)
-        if (err){
-            return console.log(err);
-        } else{
-            console.log("README.md was created");
-        }
-    });
+    return fs.writeFileSync(path.join(process.cwd(),fileName),data);
 }
 
 // function to initialize program
 function init() {
-    inquirer.prompt(questions)
-    .then(function(data){
-        writetoFile("README.md", generateMarkdown(data));
-        console.log(data)
+    inquirer.prompt(questions).then((inquirerResponses) => {
+        console.log('Generating README...');
+        writetoFile("README.md", generateMarkdown({ ...inquirerResponses }));
     });
+    
 }
 
 // function call to initialize program

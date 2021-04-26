@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require('util');
 
-const writeFileAsync = util.promisify(fs.writeFile);
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
 const questions = [
@@ -20,7 +20,7 @@ const questions = [
 
     {
     type: 'input',
-    message: "Give a detailed description of your project.",
+    message: "Give a detailed description of your project?",
     name: "Description",
 
     }, 
@@ -28,7 +28,7 @@ const questions = [
     {
     type: "input",
     message: "What necessary dependencies must be installed to run this app?",
-    name: "Installation"
+    name: "Installation",
     }, 
     
     {

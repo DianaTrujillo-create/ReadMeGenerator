@@ -12,7 +12,7 @@ const questions = [
     },
 
     {
-    type:"input",
+    type:'input',
     message: "What is the title of the project?", 
     name: "Title",
     },
@@ -25,38 +25,40 @@ const questions = [
     }, 
     
     {
-    type: "input",
+    type: 'input',
     message: "What necessary dependencies must be installed to run this app?",
     name: "Installation",
+    default: 'npm i',
     }, 
     
     {
-    type: "input", 
+    type: 'input', 
     message: "What is app used for?", 
     name: "Usage",
-   
     }, 
     
     {
-    type: "list",
+    type: 'list',
     message: "What license is being used?",
     name: "License",
+    choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None'],
     },
 
     {
-    type: "input",
+    type: 'input',
     message: "Who contributed to this project?:",
-    name: "Contributing"
+    name: "Contributing",
     }, 
     
     {
-    type: "input",
+    type: 'input',
     message: "What is needed to test this app?",
     name: "Test",
+    default: 'npm test',
     }, 
     
     {
-    type: "input",
+    type: 'input',
     message: "What is your email address?",
     name: "Email",
     },
@@ -65,7 +67,7 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-    return fs.writeFileSync(path.join(process.cwd(),fileName),data);
+    return fs.writeFileSync(path.join(process.cwd(),fileName), data);
 }
 
 // function to initialize program

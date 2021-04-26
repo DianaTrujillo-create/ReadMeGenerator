@@ -47,7 +47,7 @@ ${data.Test}
 
 If you have any questions about the repo, please contact me directly at ${data.email}. 
 
-`;
+`
 }
 
 module.exports = generateMarkdown;

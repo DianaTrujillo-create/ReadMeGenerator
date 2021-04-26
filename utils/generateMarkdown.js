@@ -5,19 +5,19 @@ function generateMarkdown(data) {
 
   ## Table of Contents
 
-  *[Description](#description)
-  *[Installation](#installation)
-  *[Usage](#usage)
-  *[Contributing](#contributing)
-  *[Test](#test)
-  *[License](#license)
-  *[Questions](#questions)
+  *[Description](#Description)
+  *[Installation](#Installation)
+  *[Usage](#Usage)
+  *[Contributing](#Contributing)
+  *[Test](#Test)
+  *[License](#License)
+  *[Questions](#Questions)
 
-  ## Description :
+ ## Description :
 
   ${data.Description}
 
-  ## Installation :
+ ## Installation :
   
   To install necessary dependencies, run the following command:
 
@@ -25,29 +25,29 @@ function generateMarkdown(data) {
   ${data.Installation}
   \'\'\'
 
-  ## Usage 
+ ## Usage 
 
   ${data.Usage}
 
   ${renderLicenseSection(data.License)}
 
-  ## Contributing
+ ## Contributing
 
-${data.Contributing}
+ ${data.Contributing}
 
-## Test
+ ## Test
 
-To run tests, run the following command: 
+ To run tests, run the following command: 
 
-\'\'\'
-${data.Test}
-\'\'\'
+ \'\'\'
+ ${data.Test}
+ \'\'\'
 
-## Questions
+ ## Questions
 
-If you have any questions about the repo, please contact me directly at ${data.email}. 
+ If you have any questions about the repo, please contact me directly at ${data.email}. 
 
-`
+ `
 }
 
 module.exports = generateMarkdown;
